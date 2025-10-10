@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiTech.API", "OptiTech.API\OptiTech.API.csproj", "{49E69BD2-3793-4549-B0FE-C8E8A395A9CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2AF94364-5498-4C8F-BB5F-A9414D2138CF} = {2AF94364-5498-4C8F-BB5F-A9414D2138CF}
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6} = {8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiTech.Infrastructure", "Infrastructure\OptiTech.Infrastructure.csproj", "{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{635772CC-0B04-49B9-915B-5787E8DF15DF} = {635772CC-0B04-49B9-915B-5787E8DF15DF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiTech.Application", "OptiTech.Application\OptiTech.Application.csproj", "{2AF94364-5498-4C8F-BB5F-A9414D2138CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{635772CC-0B04-49B9-915B-5787E8DF15DF} = {635772CC-0B04-49B9-915B-5787E8DF15DF}
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6} = {8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiTech.Core", "OptiTech.Core\OptiTech.Core.csproj", "{635772CC-0B04-49B9-915B-5787E8DF15DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49E69BD2-3793-4549-B0FE-C8E8A395A9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E69BD2-3793-4549-B0FE-C8E8A395A9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E69BD2-3793-4549-B0FE-C8E8A395A9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E69BD2-3793-4549-B0FE-C8E8A395A9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA2A5AC-B0BC-482E-8BFA-22D2DFB3A6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF94364-5498-4C8F-BB5F-A9414D2138CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF94364-5498-4C8F-BB5F-A9414D2138CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF94364-5498-4C8F-BB5F-A9414D2138CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF94364-5498-4C8F-BB5F-A9414D2138CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635772CC-0B04-49B9-915B-5787E8DF15DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635772CC-0B04-49B9-915B-5787E8DF15DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635772CC-0B04-49B9-915B-5787E8DF15DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635772CC-0B04-49B9-915B-5787E8DF15DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
