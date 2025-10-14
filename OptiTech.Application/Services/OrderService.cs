@@ -2,6 +2,7 @@
 using OptiTech.Application.Interfaces.Repositories;
 using OptiTech.Application.Interfaces.Services;
 using OptiTech.Core.Aggregates;
+using OptiTech.Core.Interfaces;
 using OptiTech.Infrastructure.Data;
 
 namespace OptiTech.Application.Services

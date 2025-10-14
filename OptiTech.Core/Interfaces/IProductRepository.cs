@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using OptiTech.Core.Entities;
 
-namespace OptiTech.Application.Interfaces.Repositories
+namespace OptiTech.Core.Interfaces
 {
     public interface IProductRepository
     {
         Task<Product> GetByIdAsync(int productId);
+        Task AddAsync(Product product);
     }
 }
