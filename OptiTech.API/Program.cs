@@ -7,7 +7,11 @@ using OptiTech.Application.Mappings;
 using OptiTech.Application.Services;
 using OptiTech.Core.Entities;
 using OptiTech.Core.Interfaces;
+using OptiTech.Core.Services;
 using OptiTech.Infrastructure.Data;
+using OptiTech.Infrastructure.Messaging;
+using OptiTech.Infrastructure.Messaging.Consumers;
+using OptiTech.Infrastructure.Messaging.HostedServices;
 using OptiTech.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,9 +27,18 @@ builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+
+builder.Services.AddSingleton<IRabbitMqService, RabbitMqService>();
+
+builder.Services.AddSingleton<InventoryUpdatedConsumer>();
 
 builder.Services.AddScoped<IMapper<Product, ProductDto>, ProductMapper>();
+builder.Services.AddScoped<IMapper<InventoryItem, InventoryItemDto>, InventoryMapper>();
+builder.Services.AddHostedService<InventoryUpdatedConsumerHostedService>();
 
+builder.Services.AddLogging();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

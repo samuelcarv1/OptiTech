@@ -10,7 +10,14 @@ namespace OptiTech.Infrastructure.Repositories
         private readonly AppDbContext _context;
         public InventoryRepository(AppDbContext context) => _context = context;
 
-        public async Task<InventoryItem> GetByProductIdAsync(int productId)
+        public async Task AddAsync(InventoryItem item)
+        {
+            _context.InventoryItems.Add(item);
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<InventoryItem?> GetByProductIdAsync(int productId)
         {
             return await _context.InventoryItems
                 .Include(i => i.Product)
